@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.navigation{
+    height: 96px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fdf2e9;
+}
+
+.logo img{
+    height: 120px;
+    width: auto;
+}
+
+ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+ul li:last-child{
+    margin-right: 100px;
+}
+
+ul li{
+    font-size: 21px;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background-color: #eba266;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.4s;
+}
+
+ul li:hover::after{
+    width: 100%;
+}
+
+.hero-section{
+    height: calc(100vh - 96px);
+    background-color: #fdf2e9;
+}
+
+.hero{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.hero_img img{
+    width: 70%;
+    height: auto;
+    z-index: 9;
+}
+
+.hero_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero_img::after{
+    content: '';
+    height: 544px;
+    width: 544px;
+    border-radius: 50%;
+    background-color: #e4dad2;
+    position: absolute;
+}
+
+.hero-text h1{
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-text p{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.btn{
+    border: none;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color: #eba266;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 18px;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px rgba(235, 162, 102, 0.5);
+}
+
+.btn:active{
+    transform: translateY(3px);
+    box-shadow: 0 10px 15px rgba(235, 162, 102, 0.5);
+}
+
+.btn::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    background-color: #eba266;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+
+
+
